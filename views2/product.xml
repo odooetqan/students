@@ -8,7 +8,7 @@
             <field name="arch" type="xml">
                 <field name="detailed_type" position="after">
                     <field name="fees"/>
-                    <!-- <field name="fees_id"/> -->
+                    <field name="fees_id"/>
                 </field>
             </field>
         </record>
@@ -20,7 +20,7 @@
             <field name="arch" type="xml">
                 <xpath expr="//field[@name='name']" position="after"> <!-- Replace existing_field_name with the name of an existing field in the view -->
                     <field name="fees"/>
-                    <!-- <field name="fees_id"/> -->
+                    <field name="fees_id"/>
                 </xpath>
             </field>
         </record>

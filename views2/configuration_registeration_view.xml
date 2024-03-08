@@ -12,7 +12,7 @@
 							<div class="oe_title">
 								<h1>Gender</h1>
 								<h1>
-									<field name="name"/>
+									<field name="gender"/>
 									<br/>
 								</h1>
 							</div>
@@ -26,7 +26,7 @@
 			<field name="model">gender</field>
 			<field name="arch" type="xml">
 				<tree editable="top">
-					<field name="name"/>
+					<field name="gender"/>
 				</tree>
 			</field>
 		</record>
@@ -35,7 +35,7 @@
 			<field name="model">gender</field>
 			<field name="arch" type="xml">
 				<search string="Gender search">
-					<!-- <field name="name"/> -->
+					<!-- <field name="gender"/> -->
 				</search>
 			</field>
 		</record>
@@ -57,7 +57,7 @@
 							<div class="oe_title">
 								<h1>Id Type</h1>
 								<h1>
-									<field name="name"/>
+									<field name="id_type"/>
 									<br/>
 								</h1>
 							</div>
@@ -71,7 +71,7 @@
 			<field name="model">id.type</field>
 			<field name="arch" type="xml">
 				<tree editable="top">
-					<field name="name"/>
+					<field name="id_type"/>
 				</tree>
 			</field>
 		</record>
@@ -80,7 +80,7 @@
 			<field name="model">id.type</field>
 			<field name="arch" type="xml">
 				<search string="Id Type search">
-					<field name="name" string="ID type"/>
+					<field name="id_type" string="ID type"/>
 				</search>
 			</field>
 		</record>
@@ -103,7 +103,7 @@
 							<div class="oe_title">
 								<h1>Work Type</h1>
 								<h1>
-									<field name="name"/>
+									<field name="work_type"/>
 									<br/>
 								</h1>
 							</div>
@@ -117,7 +117,7 @@
 			<field name="model">work.type</field>
 			<field name="arch" type="xml">
 				<tree editable="top">
-					<field name="name"/>
+					<field name="work_type"/>
 				</tree>
 			</field>
 		</record>
@@ -126,7 +126,7 @@
 			<field name="model">work.type</field>
 			<field name="arch" type="xml">
 				<search string="Work Type search">
-					<field name="name"/>
+					<field name="work_type"/>
 				</search>
 			</field>
 		</record>
@@ -137,54 +137,6 @@
 			<field name="view_mode">tree,form</field>
 		</record>
 		<!-- ......................................End Work Type .................................................... . -->
-		<!-- ......................................Start Relative Relation  .................................................... . -->
-		<record id="relative_relation_form_view" model="ir.ui.view">
-			<field name="name">relative.relation.form.view</field>
-			<field name="model">relative.relation</field>
-			<field name="arch" type="xml">
-				<form>
-					<header></header>
-					<sheet>
-						<div class="oe_title">
-							<div class="oe_title">
-								<h1>Relative Relation</h1>
-								<h1>
-									<field name="name"/>
-									<br/>
-								</h1>
-							</div>
-						</div>
-					</sheet>
-				</form>
-			</field>
-		</record>
-		<record id="relative_relation_tree_view" model="ir.ui.view">
-			<field name="name">relative.relation.view.tree</field>
-			<field name="model">relative.relation</field>
-			<field name="arch" type="xml">
-				<tree editable="top">
-					<field name="name"/>
-				</tree>
-			</field>
-		</record>
-		<record id="relative_relation_search_view" model="ir.ui.view">
-			<field name="name">Relative Relation search</field>
-			<field name="model">relative.relation</field>
-			<field name="arch" type="xml">
-				<search string="Relative Relation search">
-					<field name="name"/>
-				</search>
-			</field>
-		</record>
-		<record model="ir.actions.act_window" id="action_relative_relation">
-			<field name="name">Relative Relation</field>
-			<field name="res_model">relative.relation</field>
-			<!--<field name="view_type">form</field>-->
-			<field name="view_mode">tree,form</field>
-		</record>
-		<!-- ......................................End Relative Relation .................................................... . -->
-
-		
 		<!-- ......................................Know US .................................................... . -->
 		<record id="know_us_form_view" model="ir.ui.view">
 			<field name="name">know.us.form.view</field>
@@ -197,7 +149,7 @@
 							<div class="oe_title">
 								<h1>Know US</h1>
 								<h1>
-									<field name="name"/>
+									<field name="know_us"/>
 									<br/>
 								</h1>
 							</div>
@@ -211,7 +163,7 @@
 			<field name="model">know.us</field>
 			<field name="arch" type="xml">
 				<tree editable="top">
-					<field name="name"/>
+					<field name="know_us"/>
 				</tree>
 			</field>
 		</record>
@@ -220,7 +172,7 @@
 			<field name="model">know.us</field>
 			<field name="arch" type="xml">
 				<search string="Know Us search">
-					<field name="name"/>
+					<field name="know_us"/>
 				</search>
 			</field>
 		</record>
@@ -597,7 +549,6 @@
 							</div>
 						</div>
 						<group>
-							<field name="seq"/>
 							<field name="stage_id"/>
 							<field name="section_id"/>
 							<field name="track_id"/>
@@ -611,7 +562,6 @@
 			<field name="model">classes</field>
 			<field name="arch" type="xml">
 				<tree editable="top">
-					<field name="seq"/>
 					<field name="name"/>
 					<field name="stage_id"/>
 					<field name="section_id"/>
@@ -624,7 +574,6 @@
 			<field name="model">classes</field>
 			<field name="arch" type="xml">
 				<search string="Stages">
-					<field name="seq"/>
 					<field name="name" />
 					<field name="stage_id"/>
 					<field name="section_id"/>
@@ -871,23 +820,19 @@
 			<field name="view_mode">tree,form</field>
 		</record>
 		<record model="ir.actions.act_window" id="action_student_student">
-			<field name="name">Student </field>
+			<field name="name">Student G</field>
 			<field name="res_model">student.student</field>
 			<field name="view_mode">tree,form</field>
 		</record>
 		<!-- ...................................................... Start Menus...................................................... -->
-		<menuitem id="registeration"  name="School Registeration Base"  web_icon="school_reg_base,static/description/student.png" sequence="-10"/>
+		<menuitem id="registeration"  name="School Registeration Base"  web_icon="genders,static/description/icon.png" sequence="-10"/>
 		<menuitem id="menu_action_student_student" name="Students" parent="registeration" action="action_student_student" sequence="5"/>
 		<menuitem id="menu_action_student_guardian" name="Guardian" parent="registeration" action="action_student_guardian" sequence="5"/>
 		<menuitem id="menu_item_configuration" name="Configuration" parent="registeration"   sequence="50"/>
-		<!--<menuitem id="menu_dropoff_reason_new" name="Dropoff Reason" parent="registeration" action="action_dropoff_student"/>-->
 		<menuitem id="menu_general" name="General" parent="menu_item_configuration" />
 		<menuitem id="menu_action_gender" name="Gender" parent="menu_general" action="action_gender" sequence="1"/>
 		<menuitem id="menu_action_id_type" name="ID Type" parent="menu_general" action="action_id_type" sequence="2"/>
 		<menuitem id="menu_action_work_type" name="Work Type" parent="menu_general" action="action_work_type" sequence="3"/>
-		<menuitem id="menu_action_relative_relation" name="Relative Relation" parent="menu_general" action="action_relative_relation" sequence="3"/>
-
-		
 		<menuitem id="menu_action_know_us" name="Know Us" parent="menu_general" action="action_know_us" sequence="4"/>
 		<menuitem id="menu_action_dropoff_reasons" name="Drop Off Reasons" parent="menu_general" action="action_dropoff_reasons" sequence="4"/>
 		<menuitem id="menu_action_student_status" name="Student Status" parent="menu_general" action="action_student_status" sequence="5"/>
@@ -898,12 +843,13 @@
 		<menuitem id="menu_action_sections" name="Sections" parent="menu_classes_information" action="action_sections" sequence="7"/>
 		<menuitem id="menu_action_stages" name="Stages" parent="menu_classes_information" action="action_stages" sequence="7"/>
 		<menuitem id="menu_action_classes" name="classes" parent="menu_classes_information" action="action_classes" sequence="7"/>
-		<menuitem id="menu_action_secondry_majors" name="Secondry Majors" parent="menu_classes_information" action="action_secondry_majors" sequence="7"/>
-		<menuitem id="menu_action_ex_schools" name="Ex Schools" parent="menu_classes_information" action="action_ex_schools" sequence="7"/>
+		<menuitem id="menu_action_secondry_majors" name="secondry_majors" parent="menu_classes_information" action="action_secondry_majors" sequence="7"/>
+		<menuitem id="menu_action_ex_schools" name="ex_schools" parent="menu_classes_information" action="action_ex_schools" sequence="7"/>
 		<menuitem id="menu_action_years" name="years" parent="menu_classes_information" action="action_years" sequence="7"/>
 		<menuitem id="menu_invoicing" name="Invoicing"  parent="menu_item_configuration"/>
 		<menuitem id="menu_action_fees" name="Fees" parent="menu_invoicing" action="action_fees" sequence="7"/>
 		<menuitem id="menu_action_product_product" name="Product" parent="menu_invoicing" action="action_product_product" sequence="7"/>
+
 		
 	</data>
 </odoo>

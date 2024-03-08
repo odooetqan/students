@@ -24,6 +24,11 @@
         'security/ir.model.access.csv',
         'views/configuration_registeration_view.xml',
         'views/product.xml',
+        'views/students.xml',
+        'views/guardians.xml',
+        'views/dropofoo_reasons.xml',
+
+        
     ],
     'installable': True,
     'application': True,

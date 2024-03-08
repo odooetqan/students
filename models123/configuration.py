@@ -30,12 +30,6 @@ class KnowUs(models.Model):
     _description = "Descripe how you are know about us "
 
     name = fields.Char("Know Us", tracking=True, required=True)
-    
-class RelativeRelation(models.Model):
-    _name = "relative.relation"
-    _description = "Descripe whats is  relative relation "
-
-    name = fields.Char(string='Relative Relation', tracking=True, required=True)
 
 
 class StudentStatus(models.Model):

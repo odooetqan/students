@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+	<data>
+    <!-- ......................................Start Student Student .................................................... . -->
+
+        <!-- Start Student Student -->
+        <record id="student_student_form_view" model="ir.ui.view">
+            <field name="name">student.student.form.view</field>
+            <field name="model">student.student</field>
+            <field name="arch" type="xml">
+                <form>
+                    <header>
+                        <!-- <button name="student_confirm" type="object" string="Confirm" states="draft" class="btn-success" />
+                        <button name="student_blocked" type="object" string="Blocked" states="draft" class="btn-danger" />
+                        <button name="reset_draft" type="object" string="Reset to Draft" states="blocked,active" class="btn-primary"/>
+                        <button name="reset_draft" type="object" string="Reset to Draft" states="draft,active,blocked,in_active" class="btn-warning"/> -->
+                        <field name="state" widget="statusbar" string="Confirm" statusbar_visible="draft,active,blocked,in_active"/>
+                    </header>
+                    <sheet>
+                        <div class="oe_title">
+                            <h1>Student</h1>
+                            <h1>
+                                <field name="student_name"/>
+                                <br/>
+                                <field name="name"/>
+                            </h1>
+                        </div>
+                        <group>
+                            <field name="gender"/>
+                            <!-- <field name="nationality"/> -->
+                            <field name="id_type"/>
+                            <field name="id_number"/>
+                            <!-- <field name="tag"/> -->
+                            <field name="birth_date"/>
+                            <field name="hijri_date"/>
+                            <field name="reason"/>
+                        </group>
+                    </sheet>
+                </form>
+            </field>
+        </record>
+        <!-- End Student Student -->
+
+		<record id="student_student_tree_view" model="ir.ui.view">
+			<field name="name">student.student.view.tree</field>
+			<field name="model">student.student</field>
+			<field name="arch" type="xml">
+				<tree editable="top">
+					<field name="student_name"/>
+					<field name="name"/>
+                    <field name="gender"/>
+                    <!-- <field name="nationality"/> -->
+                    <field name="id_type"/>
+                    <field name="id_number"/>
+                    <!-- <field name="tag"/> -->
+                    <field name="birth_date"/>
+                    <field name="hijri_date"/>
+                    <field name="reason"/>
+				</tree>
+			</field>
+		</record>
+
+		<record id="student_student_search_view" model="ir.ui.view">
+			<field name="name">student.student.search</field>
+			<field name="model">student.student</field>
+			<field name="arch" type="xml">
+				<search string="Students">
+					<field name="student_name"/>
+					<field name="name"/>
+                    <field name="gender"/>
+                    <!-- <field name="nationality"/> -->
+                    <field name="id_type"/>
+                    <field name="id_number"/>
+                    <!-- <field name="tag"/> -->
+                    <field name="birth_date"/>
+                    <field name="hijri_date"/>
+                    <field name="reason"/>
+				</search>
+			</field>
+		</record>
+		<!--   SEQ -->
+     <record id="student_student_seq" model="ir.sequence">
+            <field name="name">Student Sequence Seq</field>
+            <field name="code">student.student.seq</field>
+            <field name="prefix"></field> <!-- eval="'Guardian/' + (guardian_id.name if guardian_id else '')"/ -->
+            <field name="padding">5</field>
+            <field name="company_id" eval="False"/>
+        </record>
+		<!-- ......................................End Student Student   .................................................... . -->
+    </data>
+</odoo>

@@ -2,7 +2,6 @@ id,name,model_id/id,group_id/id,perm_read,perm_write,perm_create,perm_unlink
 access_gender,acc_gender,model_gender,,1,1,1,1
 access_id_type,acc_id_type,model_id_type,,1,1,1,1
 access_work_type,acc_work_type,model_work_type,,1,1,1,1
-access_action_relative_relation,acc_action_relative_relation,model_relative_relation,,1,1,1,1
 access_know_us,acc_know_us,model_know_us,,1,1,1,1
 access_student_status,acc_student_status,model_student_status,,1,1,1,1
 access_discount_type,acc_discount_type,model_discount_type,,1,1,1,1
@@ -21,4 +20,3 @@ access_fees,acc_fees,model_fees,,1,1,1,1
 access_dropoff_reasons,acc_dropoff_reasons,model_dropoff_reasons,,1,1,1,1
 access_student_student,acc_student_student,model_student_student,,1,1,1,1
 access_student_guardian,acc_student_guardian,model_student_guardian,,1,1,1,1
-access_student_student_dropoff,acc_student_student_dropoff,model_student_student_dropoff,,1,1,1,1
