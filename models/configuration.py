@@ -8,27 +8,40 @@ class GenderBase(models.Model):
     _name = "gender"
     _description = "Descripe gender of students and guadrians "
 
+<<<<<<< HEAD
     name = fields.Char("Gender", tracking=True, required=True)
+=======
+    gender = fields.Char("Gender", tracking=True, required=True)
+>>>>>>> 3d77c47da1a3aedf42f1601aa094d729cde6ff8f
 
 
 class IdType(models.Model):
     _name = "id.type"
     _description = "Descripe Identification type "
 
+<<<<<<< HEAD
     name = fields.Char("ID Type", tracking=True, required=True)
+=======
+    id_type = fields.Char("ID Type", tracking=True, required=True)
+>>>>>>> 3d77c47da1a3aedf42f1601aa094d729cde6ff8f
 
 
 class WorkType(models.Model):
     _name = "work.type"
     _description = "Descripe work type "
 
+<<<<<<< HEAD
     name = fields.Char("Work Type", tracking=True, required=True)
+=======
+    work_type = fields.Char("Work Type", tracking=True, required=True)
+>>>>>>> 3d77c47da1a3aedf42f1601aa094d729cde6ff8f
 
 
 class KnowUs(models.Model):
     _name = "know.us"
     _description = "Descripe how you are know about us "
 
+<<<<<<< HEAD
     name = fields.Char("Know Us", tracking=True, required=True)
     
 class RelativeRelation(models.Model):
@@ -36,6 +49,9 @@ class RelativeRelation(models.Model):
     _description = "Descripe whats is  relative relation "
 
     name = fields.Char(string='Relative Relation', tracking=True, required=True)
+=======
+    know_us = fields.Char("Know Us", tracking=True, required=True)
+>>>>>>> 3d77c47da1a3aedf42f1601aa094d729cde6ff8f
 
 
 class StudentStatus(models.Model):
@@ -105,7 +121,11 @@ class SectionsBase(models.Model):
     _description = "Descripe Sections of students  "
 
     name = fields.Char("Sections", tracking=True, required=True)
+<<<<<<< HEAD
     track_id = fields.Many2one("tracks", tracking=True, required=True)
+=======
+    track_id = fields.Many2one("tracks", tracking=True)
+>>>>>>> 3d77c47da1a3aedf42f1601aa094d729cde6ff8f
 
 
 class StagesBase(models.Model):
@@ -126,23 +146,40 @@ class ClassesBase(models.Model):
 
     name = fields.Char("Class", tracking=True, required=True)
     stage_id = fields.Many2one("stages", string="stage", tracking=True, required=True)
+<<<<<<< HEAD
     section_id = fields.Many2one("sections",related="stage_id.section_id" , tracking=True, required=True)
     track_id = fields.Many2one("tracks", tracking=True, related="stage_id.track_id" ,required=True)
     seq = fields.Integer(string="Class Sequences")
+=======
+    section_id = fields.Many2one("sections", tracking=True, required=True)
+    track_id = fields.Many2one("tracks", tracking=True, required=True)
+
+>>>>>>> 3d77c47da1a3aedf42f1601aa094d729cde6ff8f
 
 class SecondryMajorsBase(models.Model):
     _name = "secondry.majors"
     _description = "Descripe Stages of students  "
 
+<<<<<<< HEAD
     name = fields.Char("Secondary Majors", tracking=True, required=True)
     stage_id = fields.Many2one("stages", tracking=True, required=True)
     section_id = fields.Many2one("sections",related="stage_id.section_id" , tracking=True, required=True)
     track_id = fields.Many2one("tracks", tracking=True, related="stage_id.track_id" ,required=True)
+=======
+    name = fields.Char("Class", tracking=True, required=True)
+    stage_id = fields.Many2one("stages", tracking=True, required=True)
+    section_id = fields.Many2one("sections", tracking=True, required=True)
+    track_id = fields.Many2one("tracks", tracking=True, required=True)
+>>>>>>> 3d77c47da1a3aedf42f1601aa094d729cde6ff8f
 
 
 class ExSchools(models.Model):
 
+<<<<<<< HEAD
     _name = "ex.schools"
+=======
+    _name = "extra.schools"
+>>>>>>> 3d77c47da1a3aedf42f1601aa094d729cde6ff8f
     _description = "Descripe Stages of students  "
 
     name = fields.Char("ExSchools Name", tracking=True, required=True)
@@ -154,7 +191,11 @@ class Years(models.Model):
     _name = "years"
     _description = "Descripe Years of students  "
 
+<<<<<<< HEAD
     name = fields.Integer("Name", tracking=True, required=True)
+=======
+    name = fields.Char("Name", tracking=True, required=True)
+>>>>>>> 3d77c47da1a3aedf42f1601aa094d729cde6ff8f
 
 
 class Fees(models.Model):
