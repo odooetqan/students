@@ -23,6 +23,7 @@
         'security/multi_company_security.xml',
         'security/ir.model.access.csv',
         'views/configuration_registeration_view.xml',
+        'views/product.xml',
     ],
     'installable': True,
     'application': True,
