@@ -7,6 +7,7 @@
     'summary': """Base Module of Registeration students in school with all configuration""",
     'description': """
     """,
+    
     'sequence': -100,
 
     'author': 'Alhayah Ltd.',
